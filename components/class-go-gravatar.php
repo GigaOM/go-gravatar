@@ -48,7 +48,7 @@ class GO_Gravatar
 		if ( ! $response = wp_cache_get( $gravatar_hash, 'go-gravatar' ) )
 		{
 			// Attempt to retrieve profile as JSON
-			$response = wp_remote_get( 'http://www.gravatar.com/' . $gravatar_hash . '.json' );
+			$response = wp_remote_get( 'https://secure.gravatar.com/' . $gravatar_hash . '.json' );
 
 			wp_cache_set( $gravatar_hash, $response, 'go-gravatar', $this->cache_time );
 		} // END if
